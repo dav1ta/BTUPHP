@@ -10,12 +10,10 @@ class PostController extends Controller
     public function index()
     {
         $posts=Post::all();
-
         return view('posts')->with('posts',$posts);
     }
 
-    public function show($id){
-    $post = Post::findOrFail($id);
+    public function show(Post $post){
     return view('post')->with('post',$post);
     }
 
@@ -29,6 +27,22 @@ class PostController extends Controller
         $post->save();
         return redirect()->back();
 
+    }
+
+    public function delete(Request $request,Post $post){
+            $post->delete();
+        return $this->index();
+
+    }
+
+    public function update(Request $request,Post $post){
+        $post ->update($request-> all());
+        return view("edit")->with("post", $post);
+    }
+
+
+    public function edit(Request $request,Post $post){
+        return view("edit")->with("post", $post);
     }
 
 }

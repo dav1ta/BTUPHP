@@ -20,7 +20,7 @@
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="d-flex  align-items-center  flex-column mt-2">
 @yield("content")
 </body>
 </html>
