@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SavePostRequest;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
     public function index()
     {
         $posts=Post::all();
-        return view('posts')->with('posts',$posts);
+        $user = Auth::user();
+        return view('posts')->with('posts',$posts)->with('user',$user);
     }
 
     public function show(Post $post){
@@ -33,6 +36,7 @@ class PostController extends Controller
 //        ]);
 
         $post = new Post($request->all());
+        $post -> user_id = Auth::id();
         $post->save();
         return redirect()->back();
 
@@ -52,6 +56,14 @@ class PostController extends Controller
 
     public function edit(Request $request,Post $post){
         return view("edit")->with("post", $post);
+    }
+
+    public function my_posts(){
+        $id = Auth::id();
+        $user = User::find($id);
+        $posts = $user->posts;
+        $user = Auth::user();
+        return view('posts')->with('posts',$posts)->with('user',$user);
     }
 
 }

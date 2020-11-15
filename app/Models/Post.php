@@ -13,4 +13,12 @@ class Post extends Model
         'post_text',
         'likes'
     ];
+    /**
+     * @var mixed
+     */
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }
