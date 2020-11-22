@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,8 +33,12 @@ Route::post('/auth',[LoginController::class,'postLogin'])->name('auth');
 Route::post('/logout',[LoginController::class,'logout'])->name('logout');
 Route::get('/register',[LoginController::class,'register'])->name('register');
 Route::post('/adduser',[LoginController::class,'postRegister'])->name('adduser');
-
-
 Route::get('/my_posts', [PostController::class, 'my_posts'])->name('my_posts')
     ->middleware('auth');
+Route::get('/tags', [TagController::class, 'index'])->name('tags.all');
+Route::get('/tags/create', [TagController::class, 'create'])->name('tags.create')->middleware('auth');
+Route::post('/tags/save', [TagController::class, 'save'])->name('tags.save')->middleware('auth');
+Route::delete('/tags/{tag}/delete', [TagController::class, 'delete'])->name('tags.delete')->middleware('auth');
+Route::get('/tags/{tag}/edit', [TagController::class, 'edit'])->name('tags.edit')->middleware('auth');
+Route::put('/tags/{tag}/update', [TagController::class, 'update'])->name('tags.update')->middleware('auth');
 

@@ -31,6 +31,6 @@ class LoginController extends Controller
         $user = new User($request->all());
         $user -> password = bcrypt($request->input('password'));
         $user->save();
-        return redirect()->route('index');
+        return $this->postLogin($request);
 }
 }

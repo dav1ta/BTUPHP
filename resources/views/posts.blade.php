@@ -18,6 +18,11 @@
                 <p class="card-text">{{$post->post_text }}</p>
                 <h4 class="card-text">{{$post->likes }} likes</h4>
                 <h6 class="card-text">{{$post->user->name }}</h6>
+                @foreach($post -> tags -> pluck('name') as $tag)
+                  <span>{{ $tag }}|</span>
+                @endforeach
+                <br/>
+
                 <a href="{{route('posts.edit', $post->id)}}" class="btn btn-primary">edit</a>
                 <form method="post" action="{{route('posts.delete', $post->id)}}">
                     @csrf

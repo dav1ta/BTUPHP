@@ -16,6 +16,18 @@
                 <label for="exampleInputEmail1">Post Likes</label>
                 <input type="name" class="form-control" value="{{old('likes', $post->likes)}}" placeholder="Name" name="likes">
             </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect2">Example multiple select</label>
+                <select name="tags[]" multiple class="form-control" id="exampleFormControlSelect2">
+                    @foreach($tags as $tag)
+                        <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                    @endforeach
+                </select>
+
+
+            </div>
+
+
         </div>
         <input type="hidden" name="_token"  id='csrf_toKen' value="{{ csrf_toKen() }}">
         <div class="box-footer">
