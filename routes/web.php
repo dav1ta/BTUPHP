@@ -41,4 +41,7 @@ Route::post('/tags/save', [TagController::class, 'save'])->name('tags.save')->mi
 Route::delete('/tags/{tag}/delete', [TagController::class, 'delete'])->name('tags.delete')->middleware('auth');
 Route::get('/tags/{tag}/edit', [TagController::class, 'edit'])->name('tags.edit')->middleware('auth');
 Route::put('/tags/{tag}/update', [TagController::class, 'update'])->name('tags.update')->middleware('auth');
+Route::put('/posts/{post}/approve', [PostController::class, 'approve'])->name('approve');
+Route::put('/posts/{post}/is_liked', [PostController::class, 'is_liked'])->name('is_liked');
+Route::post('/mail/send', [MailController::class, 'send'])->name('mail.send');
 

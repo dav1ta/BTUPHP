@@ -20,15 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1332fb4-da59-4634-9098-bee62d1638cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/tag/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/tag/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/tag/tags.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_151528_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_151528_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -165,7 +164,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../employees" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../quizz" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -194,7 +193,9 @@
       <workItem from="1603724741002" duration="5560000" />
       <workItem from="1605464093056" duration="8446000" />
       <workItem from="1605540837380" duration="1397000" />
-      <workItem from="1606072372674" duration="3393000" />
+      <workItem from="1606072372674" duration="3458000" />
+      <workItem from="1606738756464" duration="5039000" />
+      <workItem from="1608664826472" duration="7990000" />
     </task>
     <servers />
   </component>
@@ -214,10 +215,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2661" y="278" width="428" height="478" key="FileChooserDialogImpl" timestamp="1603724876215">
+    <state x="2659" y="256" width="428" height="478" key="FileChooserDialogImpl" timestamp="1606748451886">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2661" y="278" width="428" height="478" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603724876215" />
+    <state x="2659" y="256" width="428" height="478" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606748451886" />
+    <state width="1874" height="280" key="GridCell.Tab.0.bottom" timestamp="1608670346453">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608670346453" />
+    <state width="1874" height="280" key="GridCell.Tab.0.center" timestamp="1608670346453">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="280" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608670346453" />
+    <state width="1874" height="280" key="GridCell.Tab.0.left" timestamp="1608670346453">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="280" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608670346453" />
+    <state width="1874" height="280" key="GridCell.Tab.0.right" timestamp="1608670346453">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="280" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608670346453" />
     <state x="2649" y="236" width="451" height="562" key="NewPhpClassDialog" timestamp="1603055404065">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -226,10 +243,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2463" y="193" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1601913752092" />
-    <state x="2488" y="126" width="766" height="694" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606074769436">
+    <state x="2462" y="-153" width="774" height="767" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608672798711">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2488" y="126" width="766" height="694" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606074769436" />
+    <state x="2462" y="-153" width="774" height="767" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608672798711" />
     <state x="2542" y="249" key="run.anything.popup" timestamp="1602431436369">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
